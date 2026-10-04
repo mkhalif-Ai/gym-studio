@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --red: #ed563b;
+    --dark: #191919;
+    --text: #777;
+    --light: #f7f7f7;
+    --border: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+
+
+.header {
+    height: 90px;
+    background: rgba(35, 35, 35, 0.96);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.nav-container {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--red);
+}
+
+.nav .signup {
+    background: var(--red);
+    padding: 14px 20px;
+    color: #fff;
+}
+
+.nav .signup:hover {
+    background: #f57962;
+    color: #fff;
+}
+
+#menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .62), rgba(0, 0, 0, .62)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.hero-content h1 span {
+    color: var(--red);
+}
+
+.main-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--red);
+    color: #fff;
+    padding: 14px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    background: #fff;
+    color: var(--red);
+}
+
+
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.section-heading .small-title {
+    font-size: 11px;
+    color: var(--red);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-heading h2 span {
+    color: var(--red);
+}
+
+.section-heading > p:last-child {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+.line {
+    width: 45px;
+    height: 3px;
+    background: var(--red);
+    margin: 15px auto 0;
+}
+
+
+.program {
+    background: #fff;
+}
+
+.program-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 30px;
+}
+
+.program-card {
+    flex: 1 1 calc(50% - 15px);
+    display: flex;
+    gap: 25px;
+}
+
+.program-icon {
+    min-width: 75px;
+    width: 75px;
+    height: 75px;
+    background: var(--red);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+
+.program-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.program-card p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.program-card a,
+.class-detail a {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+
+.cta {
+    min-height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: 800;
+}
+
+.cta h2 span {
+    color: var(--red);
+}
+
+.cta p {
+    max-width: 680px;
+    margin: 15px auto 25px;
+    color: #eee;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+
+.classes-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.class-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.class-tab {
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    padding: 20px;
+    text-align: left;
+    color: #222;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.class-tab.active,
+.class-tab:hover {
+    color: var(--red);
+}
+
+.class-list .main-btn {
+    width: 100%;
+}
+
+.class-detail {
+    flex: 1;
+}
+
+.class-detail img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.class-detail h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.class-detail p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+
+
+.schedule {
+    position: relative;
+    padding: 100px 0;
+    background:
+        linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.78)),
+        url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1800&q=80")
+        center / cover fixed;
+}
+
+.schedule .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-heading.light {
+    color: #fff;
+}
+
+.section-heading.light > p:last-child {
+    color: #ddd;
+}
+
+.days {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.days button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.days button.selected,
+.days button:hover {
+    color: var(--red);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th,
+td {
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 11px;
+}
+
+th {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+
+
+.trainer-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.trainer-card {
+    flex: 1;
+    background: #fff;
+    box-shadow: 0 3px 18px rgba(0,0,0,.08),
+    
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 320px;
+    display: block;
+    object-fit: cover;
+}
+
+.trainer-card div {
+    padding: 25px;
+}
+
+.trainer-card small {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.trainer-card h3 {
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.trainer-card p {
+    color: var(--text);
+    font-size: 12px;
+}
+
+
+
+.contact {
+    display: flex;
+    min-height: 550px;
+}
+
+.contact-map {
+    width: 50%;
+    background:
+ linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.map-placeholder {
+    background: rgba(255,255,255,.95);
+    text-align: center;
+    padding: 30px;
+    min-width: 230px;
+}
+
+
+
+
+.contact-form {
+    width: 50%;
+    padding: 80px 7%;
+   background: 
+      linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.78)),
+        url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1800&q=80");
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.contact-form h2 span {
+    color: var(--red);
+}
+
+.contact-form > .line {
+    margin: 15px 0 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    width: 50%;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    font-size: 12px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--red);
+}
+
+form .main-btn {
+    align-self: flex-start;
+}
+
+
+
+.footer {
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.footer p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .program-card {
+        flex-basis: 100%;
+    }
+
+    .classes-layout {
+        gap: 30px;
+    }
+
+    .trainer-card img {
+        height: 260px;
+    }
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .header,
+    .nav-container {
+        height: 75px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #fff;
+    }
+
+    .nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav a {
+        padding: 16px 25px;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav .signup {
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .program-card {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .program-icon {
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .classes-layout {
+        flex-direction: column;
+    }
+
+    .class-list {
+        width: 100%;
+    }
+
+    .class-detail {
+        width: 100%;
+    }
+
+    .class-detail img {
+        height: 240px;
+    }
+
+    .trainer-grid {
+        flex-direction: column;
+    }
+
+    .trainer-card img {
+        height: 350px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-map,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-map {
+        min-height: 350px;
+    }
+
+    .contact-form {
+        padding: 60px 8%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input {
+        width: 100%;
+    }
+
+    .days {
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .program-card {
+        flex-direction: column;
+    }
+
+    .program-icon {
+        margin-bottom: 5px;
+    }
+
+    .cta {
+        min-height: 400px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+}
